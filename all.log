@@ -1,0 +1,2628 @@
+2021-07-16 10:42:33,831,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:42:33,869,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20260
+2021-07-16 10:42:48,514,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:42:48,529,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20260
+2021-07-16 10:42:55,986,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:42:56,002,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20260
+2021-07-16 10:42:57,264,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:42:57,279,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20260
+2021-07-16 10:42:57,465,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:42:57,480,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20260
+2021-07-16 10:42:57,676,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:42:57,691,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20260
+2021-07-16 10:43:33,755,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:43:33,769,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20260
+2021-07-16 10:43:40,950,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:43:40,965,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20260
+2021-07-16 10:43:42,337,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:43:42,352,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20260
+2021-07-16 10:43:49,341,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:43:49,357,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20260
+2021-07-16 10:44:17,263,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:44:17,277,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20059
+2021-07-16 10:44:28,197,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:44:28,212,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20059
+2021-07-16 10:44:37,640,97353,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 10:44:37,655,97353,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 20059
+2021-07-16 13:28:15,064,136,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 13:28:15,142,136,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18434
+2021-07-16 13:30:08,058,136,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 13:30:08,077,136,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18636
+2021-07-16 13:30:16,139,136,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 13:30:16,162,136,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18635
+2021-07-16 13:32:42,841,136,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 13:32:42,864,136,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18635
+2021-07-16 13:32:47,236,136,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 13:32:47,262,136,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18635
+2021-07-16 13:34:34,699,332,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    print(serialize.data)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 13:34:34,770,332,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18607
+2021-07-16 13:34:55,493,356,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    print(serialize.data)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 13:34:55,559,356,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18607
+2021-07-16 13:35:32,041,414,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    print(serialize.data)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 13:35:32,111,414,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18607
+2021-07-16 13:36:36,116,443,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 52, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 13:36:36,182,443,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18635
+2021-07-16 13:42:12,292,466,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 13:42:12,327,466,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18635
+2021-07-16 13:42:16,487,466,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 13:42:16,519,466,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18635
+2021-07-16 13:45:44,003,466,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 13:45:44,022,466,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18635
+2021-07-16 14:46:17,181,1890,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 14:46:17,262,1890,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18625
+2021-07-16 14:48:56,570,1890,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 14:48:56,622,1890,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18625
+2021-07-16 14:49:18,533,1950,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 14:49:18,601,1950,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18625
+2021-07-16 14:59:53,141,2989,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 51, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 14:59:53,249,2989,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18634
+2021-07-16 15:01:23,311,3866,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 52, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 15:01:23,391,3866,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18634
+2021-07-16 15:01:48,524,3927,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 52, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 15:01:48,591,3927,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18634
+2021-07-16 15:02:14,475,3950,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 52, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 15:02:14,531,3950,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18634
+2021-07-16 15:03:04,289,3968,django.request,ERROR,exception.py:115,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Python/3.8/site-packages/rest_framework/views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/projectList.py", line 53, in get
+    return JsonResponse(data={"data": serialize.data,
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 742, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 659, in to_representation
+    return [
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 660, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/3.8/site-packages/rest_framework/serializers.py", line 491, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Library/Python/3.8/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Project` instance.
+Original exception text was: 'NoneType' object has no attribute 'first_name'.
+2021-07-16 15:03:04,360,3968,django.server,ERROR,basehttp.py:124,"GET /api/project/project_list?page=1&name= HTTP/1.1" 500 18634
+2021-07-17 09:38:35,413,8343,root,ERROR,automationCase.py:1067,Failed to parse: 192.168.1.185:8889http:
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 371, in prepare_url
+    scheme, auth, host, port, path, query, fragment = parse_url(url)
+  File "/Library/Python/3.8/site-packages/urllib3/util/url.py", line 199, in parse_url
+    raise LocationParseError(url)
+urllib3.exceptions.LocationParseError: Failed to parse: 192.168.1.185:8889http:
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 310, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 427, in prepare_request
+    p.prepare(
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 305, in prepare
+    self.prepare_url(url, params)
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 373, in prepare_url
+    raise InvalidURL(*e.args)
+requests.exceptions.InvalidURL: Failed to parse: 192.168.1.185:8889http:
+2021-07-17 09:38:40,938,8343,root,ERROR,automationCase.py:1067,Failed to parse: 192.168.1.185:8889http:
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 371, in prepare_url
+    scheme, auth, host, port, path, query, fragment = parse_url(url)
+  File "/Library/Python/3.8/site-packages/urllib3/util/url.py", line 199, in parse_url
+    raise LocationParseError(url)
+urllib3.exceptions.LocationParseError: Failed to parse: 192.168.1.185:8889http:
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 310, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 427, in prepare_request
+    p.prepare(
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 305, in prepare
+    self.prepare_url(url, params)
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 373, in prepare_url
+    raise InvalidURL(*e.args)
+requests.exceptions.InvalidURL: Failed to parse: 192.168.1.185:8889http:
+2021-07-17 09:39:41,546,8343,root,ERROR,automationCase.py:1067,Failed to parse: api.filscan.io:8700http:
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 371, in prepare_url
+    scheme, auth, host, port, path, query, fragment = parse_url(url)
+  File "/Library/Python/3.8/site-packages/urllib3/util/url.py", line 199, in parse_url
+    raise LocationParseError(url)
+urllib3.exceptions.LocationParseError: Failed to parse: api.filscan.io:8700http:
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 310, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 427, in prepare_request
+    p.prepare(
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 305, in prepare
+    self.prepare_url(url, params)
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 373, in prepare_url
+    raise InvalidURL(*e.args)
+requests.exceptions.InvalidURL: Failed to parse: api.filscan.io:8700http:
+2021-07-17 09:41:00,053,9001,root,ERROR,automationCase.py:1067,Failed to parse: api.filscan.io:8700http:
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 371, in prepare_url
+    scheme, auth, host, port, path, query, fragment = parse_url(url)
+  File "/Library/Python/3.8/site-packages/urllib3/util/url.py", line 199, in parse_url
+    raise LocationParseError(url)
+urllib3.exceptions.LocationParseError: Failed to parse: api.filscan.io:8700http:
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 310, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 427, in prepare_request
+    p.prepare(
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 305, in prepare
+    self.prepare_url(url, params)
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 373, in prepare_url
+    raise InvalidURL(*e.args)
+requests.exceptions.InvalidURL: Failed to parse: api.filscan.io:8700http:
+2021-07-17 09:41:31,678,9001,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 310, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-07-17 09:41:41,517,9001,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 310, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-07-17 09:45:25,409,9036,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 310, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-07-17 09:47:33,640,9101,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 310, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-07-17 09:48:45,843,9119,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 310, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-07-17 13:09:47,136,11876,root,ERROR,automationCase.py:1067,(1062, "Duplicate entry '2' for key 'api_test_automationtestresult.automationCaseApi_id'")
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/Library/Python/3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/Library/Python/3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 1103, in _read_query_result
+    result.read()
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Library/Python/3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '2' for key 'api_test_automationtestresult.automationCaseApi_id'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 201, in test_api
+    record_results(_id=_id, url=url, request_type=request_type, header=header, parameter=parameter, host=host.name,
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/common.py", line 117, in record_results
+    result_.save()
+  File "/Library/Python/3.8/site-packages/django/db/models/base.py", line 728, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Library/Python/3.8/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/3.8/site-packages/django/db/models/base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/3.8/site-packages/django/db/models/base.py", line 879, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "/Library/Python/3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/db/models/query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/3.8/site-packages/django/db/models/sql/compiler.py", line 1281, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/3.8/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Library/Python/3.8/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Library/Python/3.8/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Python/3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/3.8/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Python/3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/Library/Python/3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/Library/Python/3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 1103, in _read_query_result
+    result.read()
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Library/Python/3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '2' for key 'api_test_automationtestresult.automationCaseApi_id'")
+2021-07-17 14:23:16,741,13637,root,ERROR,automationCase.py:1131,module 'django.db' has no attribute 'session'
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1128, in post
+    result = pressur_test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 455, in pressur_test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 586, in post
+    db.session.add_all([pressure])
+AttributeError: module 'django.db' has no attribute 'session'
+2021-07-17 14:39:17,108,13982,root,ERROR,automationCase.py:1131,Can't pickle local object 'post.<locals>.ONE_PROCESS'
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1128, in post
+    result = pressur_test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 457, in pressur_test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 592, in post
+    one.start()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/context.py", line 283, in _Popen
+    return Popen(process_obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 47, in _launch
+    reduction.dump(process_obj, fp)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+AttributeError: Can't pickle local object 'post.<locals>.ONE_PROCESS'
+2021-07-17 14:47:12,357,14176,root,ERROR,automationCase.py:1131,'QuerySet' object has no attribute 'save'
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1128, in post
+    result = pressur_test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 457, in pressur_test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 586, in post
+    p.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+2021-07-17 14:48:10,813,14206,root,ERROR,automationCase.py:1131,'QuerySet' object has no attribute 'save'
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1128, in post
+    result = pressur_test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 457, in pressur_test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 587, in post
+    p.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+2021-07-17 14:49:16,788,14263,root,ERROR,automationCase.py:1131,'QuerySet' object has no attribute 'save'
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1128, in post
+    result = pressur_test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 457, in pressur_test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 584, in post
+    p.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+2021-07-17 14:50:43,545,14326,root,ERROR,automationCase.py:1131,Can't pickle local object 'post.<locals>.run'
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1128, in post
+    result = pressur_test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 457, in pressur_test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 591, in post
+    process.start()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/context.py", line 283, in _Popen
+    return Popen(process_obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 47, in _launch
+    reduction.dump(process_obj, fp)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+AttributeError: Can't pickle local object 'post.<locals>.run'
+2021-07-17 15:26:06,400,15410,root,ERROR,automationCase.py:1131,Can't pickle local object 'post.<locals>.run'
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1128, in post
+    result = pressur_test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 454, in pressur_test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 591, in post
+    process.start()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/context.py", line 283, in _Popen
+    return Popen(process_obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 47, in _launch
+    reduction.dump(process_obj, fp)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/multiprocessing/reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+AttributeError: Can't pickle local object 'post.<locals>.run'
+2021-07-17 16:38:28,277,16934,root,ERROR,confighttp.py:195,<class 'requests.exceptions.ReadTimeout'>
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 1337, in getresponse
+    response.begin()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Library/Python/3.8/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.filscan.io', port=8700): Read timed out. (read timeout=8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 521, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.filscan.io', port=8700): Read timed out. (read timeout=8)
+2021-07-17 16:38:38,635,16934,root,ERROR,confighttp.py:195,<class 'requests.exceptions.ReadTimeout'>
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 1337, in getresponse
+    response.begin()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Library/Python/3.8/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.filscan.io', port=8700): Read timed out. (read timeout=8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 521, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.filscan.io', port=8700): Read timed out. (read timeout=8)
+2021-07-27 11:07:40,255,36730,root,ERROR,automationCase.py:1067,(1062, "Duplicate entry '3' for key 'api_test_automationtestresult.automationCaseApi_id'")
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/Library/Python/3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/Library/Python/3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 1103, in _read_query_result
+    result.read()
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Library/Python/3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '3' for key 'api_test_automationtestresult.automationCaseApi_id'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 201, in test_api
+    record_results(_id=_id, url=url, request_type=request_type, header=header, parameter=parameter, host=host.name,
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/common.py", line 117, in record_results
+    result_.save()
+  File "/Library/Python/3.8/site-packages/django/db/models/base.py", line 728, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Library/Python/3.8/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/3.8/site-packages/django/db/models/base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/3.8/site-packages/django/db/models/base.py", line 879, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "/Library/Python/3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/3.8/site-packages/django/db/models/query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/3.8/site-packages/django/db/models/sql/compiler.py", line 1281, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/3.8/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Library/Python/3.8/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Library/Python/3.8/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Python/3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/3.8/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Python/3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/Library/Python/3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/Library/Python/3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 1103, in _read_query_result
+    result.read()
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "/Library/Python/3.8/site-packages/pymysql/connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Library/Python/3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '3' for key 'api_test_automationtestresult.automationCaseApi_id'")
+2021-08-09 14:02:32,308,22731,root,ERROR,automationCase.py:1067,Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 593, in post
+    print(response.json())
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/Users/xushuai/Library/Python/3.8/lib/python/site-packages/simplejson/__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "/Users/xushuai/Library/Python/3.8/lib/python/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/Users/xushuai/Library/Python/3.8/lib/python/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2021-08-09 14:03:52,549,22769,root,ERROR,automationCase.py:1067,Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 593, in post
+    print(response.json())
+  File "/Library/Python/3.8/site-packages/requests/models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/Users/xushuai/Library/Python/3.8/lib/python/site-packages/simplejson/__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "/Users/xushuai/Library/Python/3.8/lib/python/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/Users/xushuai/Library/Python/3.8/lib/python/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2021-08-10 14:41:01,945,33602,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-08-10 14:41:09,866,33602,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-08-10 14:41:16,389,33602,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-08-10 14:45:04,496,33929,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-08-10 15:04:06,639,33929,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-08-10 15:04:08,674,33929,root,ERROR,automationCase.py:1131,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1128, in post
+    result = pressur_test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 454, in pressur_test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-08-10 15:23:28,718,33929,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
