@@ -20,7 +20,7 @@ from api_test.common.common import record_dynamic, create_json, del_task_crontab
 from api_test.common.confighttp import test_api, pressur_test_api
 from api_test.models import Project, AutomationGroupLevelFirst, \
     AutomationTestCase, AutomationCaseApi, AutomationParameter, GlobalHost, AutomationHead, AutomationTestTask, \
-    AutomationTestResult, ApiInfo, AutomationParameterRaw, AutomationResponseJson
+    AutomationTestResult, ApiInfo, AutomationParameterRaw, AutomationResponseJson, Pressure
 
 from api_test.serializers import AutomationGroupLevelFirstSerializer, AutomationTestCaseSerializer, \
     AutomationCaseApiSerializer, AutomationCaseApiListSerializer, AutomationTestTaskSerializer, \
@@ -1072,6 +1072,49 @@ class StartTest(APIView):
         return JsonResponse(data={
             "result": result
         }, code="999999", msg="成功！")
+
+class StopPre(APIView):
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = ()
+
+    def parameter_check(self, data):
+        """
+        校验参数
+        :param data:
+        :return:
+        """
+        try:
+            # 校验project_id, id类型为int
+            if not data["project_id"] or not data["case_id"] or not data["id"] or not data["host_id"]:
+                return JsonResponse(code="999996", msg="参数有误！")
+            if not isinstance(data["project_id"], int) or not isinstance(data["case_id"], int) \
+                    or not isinstance(data["id"], int) or not isinstance(data["host_id"], int):
+                return JsonResponse(code="999996", msg="参数有误！")
+        except KeyError:
+            return JsonResponse(code="999996", msg="参数有误！")
+
+    def post(self, request):
+        """
+        执行测试用例
+        :param request:
+        :return:
+        """
+        data = JSONParser().parse(request)
+        result = self.parameter_check(data)
+        if result:
+            return result
+        try:
+            id = Pressure.objects.values("aux_id").first()
+            import os
+            os.system("kill -9 {}".format(id["aux_id"]))
+            os.system("killall -9 locust")
+        except Exception as e:
+            logging.exception(e)
+            return JsonResponse(code="999998", msg="失败！")
+        return JsonResponse(data={
+            "result": result
+        }, code="999999", msg="成功！")
+
 
 
 class PressureStartTest(APIView):

@@ -2626,3 +2626,482 @@ Traceback (most recent call last):
   File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
     raise SSLError(e, request=request)
 requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-08-14 10:45:21,816,72878,root,ERROR,automationCase.py:1131,HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: http://api.filscan.io:8700/rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10d237d90>: Failed to establish a new connection: [Errno 61] Connection refused')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 1245, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 1291, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 1240, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 1008, in _send_output
+    self.send(msg)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 948, in send
+    self.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x10d237d90>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: http://api.filscan.io:8700/rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10d237d90>: Failed to establish a new connection: [Errno 61] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1128, in post
+    result = pressur_test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 454, in pressur_test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 502, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: http://api.filscan.io:8700/rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10d237d90>: Failed to establish a new connection: [Errno 61] Connection refused')))
+2021-08-14 10:45:59,746,72888,root,ERROR,automationCase.py:1131,HTTPSConnectionPool(host='api.filscan.io', port=8700): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10bd620a0>: Failed to establish a new connection: [Errno 61] Connection refused')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 595, in urlopen
+    self._prepare_proxy(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 816, in _prepare_proxy
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x10bd620a0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.filscan.io', port=8700): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10bd620a0>: Failed to establish a new connection: [Errno 61] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1128, in post
+    result = pressur_test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 454, in pressur_test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 502, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.filscan.io', port=8700): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10bd620a0>: Failed to establish a new connection: [Errno 61] Connection refused')))
+2021-08-14 10:46:10,028,72888,root,ERROR,automationCase.py:1131,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10d64ed30>: Failed to establish a new connection: [Errno 61] Connection refused')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 595, in urlopen
+    self._prepare_proxy(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 816, in _prepare_proxy
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x10d64ed30>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10d64ed30>: Failed to establish a new connection: [Errno 61] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1128, in post
+    result = pressur_test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 454, in pressur_test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 502, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10d64ed30>: Failed to establish a new connection: [Errno 61] Connection refused')))
+2021-08-14 10:46:38,115,72907,root,ERROR,automationCase.py:1131,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x1061b62b0>: Failed to establish a new connection: [Errno 61] Connection refused')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 595, in urlopen
+    self._prepare_proxy(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 816, in _prepare_proxy
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x1061b62b0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x1061b62b0>: Failed to establish a new connection: [Errno 61] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1128, in post
+    result = pressur_test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 454, in pressur_test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 502, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x1061b62b0>: Failed to establish a new connection: [Errno 61] Connection refused')))
+2021-08-14 10:46:55,794,72907,root,ERROR,automationCase.py:1067,HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: http://192.168.1.185:8889/rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107b10be0>: Failed to establish a new connection: [Errno 61] Connection refused')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 1245, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 1291, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 1240, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 1008, in _send_output
+    self.send(msg)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/http/client.py", line 948, in send
+    self.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x107b10be0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: http://192.168.1.185:8889/rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107b10be0>: Failed to establish a new connection: [Errno 61] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 502, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: http://192.168.1.185:8889/rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107b10be0>: Failed to establish a new connection: [Errno 61] Connection refused')))
+2021-08-14 10:47:33,726,72927,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x111b96160>: Failed to establish a new connection: [Errno 61] Connection refused')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 595, in urlopen
+    self._prepare_proxy(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 816, in _prepare_proxy
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x111b96160>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x111b96160>: Failed to establish a new connection: [Errno 61] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 502, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x111b96160>: Failed to establish a new connection: [Errno 61] Connection refused')))
+2021-08-14 10:48:09,796,72927,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x111c5ddf0>: Failed to establish a new connection: [Errno 61] Connection refused')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/Library/Python/3.8/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 595, in urlopen
+    self._prepare_proxy(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 816, in _prepare_proxy
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x111c5ddf0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x111c5ddf0>: Failed to establish a new connection: [Errno 61] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 502, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x111c5ddf0>: Failed to establish a new connection: [Errno 61] Connection refused')))
+2021-08-14 10:48:33,109,72964,root,ERROR,automationCase.py:1067,HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 598, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Python/3.8/site-packages/urllib3/connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Python/3.8/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 430, in send
+    resp = conn.urlopen(
+  File "/Library/Python/3.8/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/Library/Python/3.8/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1064, in post
+    result = test_api(host_id=data["host_id"], case_id=data["case_id"],
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 187, in test_api
+    code, response_data, header_data = post(header, url, request_parameter_type, parameter)
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/common/confighttp.py", line 579, in post
+    response = requests.post(url=address, data=data, headers=header, timeout=8)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/3.8/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/3.8/site-packages/requests/adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='192.168.1.185', port=8889): Max retries exceeded with url: /rpc/v1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+2021-08-14 11:14:12,502,74849,root,ERROR,automationCase.py:1113,'QuerySet' object has no attribute 'value'
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1107, in post
+    id = Pressure.objects.filter(id=1).value()
+AttributeError: 'QuerySet' object has no attribute 'value'
+2021-08-14 11:16:33,311,74911,root,ERROR,automationCase.py:1115,'Pressure' object is not iterable
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1108, in post
+    for i in id[0]:
+TypeError: 'Pressure' object is not iterable
+2021-08-14 11:17:03,970,74931,root,ERROR,automationCase.py:1115,'Pressure' object is not subscriptable
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1110, in post
+    print(id[0][0])
+TypeError: 'Pressure' object is not subscriptable
+2021-08-14 11:17:30,861,74950,root,ERROR,automationCase.py:1115,'Pressure' object is not iterable
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1108, in post
+    for i in id:
+TypeError: 'Pressure' object is not iterable
+2021-08-14 11:17:41,330,74960,root,ERROR,automationCase.py:1113,'Pressure' object is not subscriptable
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1108, in post
+    print(id[0])
+TypeError: 'Pressure' object is not subscriptable
+2021-08-14 11:19:22,091,75001,root,ERROR,automationCase.py:1113,'Pressure' object has no attribute 'first'
+Traceback (most recent call last):
+  File "/Users/xushuai/PycharmProjects/api_automation_test/api_test/api/automationCase.py", line 1107, in post
+    id = Pressure.objects.get(id=1).first()
+AttributeError: 'Pressure' object has no attribute 'first'

@@ -8,6 +8,7 @@
             <el-button type="primary"><i class="el-icon-plus" style="margin-right: 5px"></i>新建接口</el-button>
         </router-link>
         <el-button type="primary" @click="TestAllApi()"><div>测试全部</div></el-button>
+                <el-button type="primary" @click="stopPre()"><div>停止压测</div></el-button>
         <el-select v-model="url"  placeholder="测试环境" style="float: right">
             <el-option v-for="(item,index) in Host" :key="index+''" :label="item.name" :value="item.id"></el-option>
         </el-select>
@@ -289,6 +290,30 @@
                     this.ApiList[i].result = "";
                 }
                 this.TestAll()
+            },
+            stopPre(){
+                if (this.url) {
+                    let self = this;
+                    this.ApiList[this.ApiListIndex].testStatus = true;
+                    $.ajax({
+                        type: "post",
+                        url: test+"/api/automation/stop_pre",
+                        async: true,
+                        data: JSON.stringify({
+                            project_id: Number(this.$route.params.project_id),
+                            case_id: Number(this.$route.params.case_id),
+                            host_id: Number(this.url),
+                            id: Number(this.ApiList[this.ApiListIndex].id)
+                        }),
+                        headers: {
+                            "Content-Type": "application/json",
+                            Authorization: 'Token '+JSON.parse(sessionStorage.getItem('token'))
+                        },
+                        success: function(data) {
+
+                        },
+                    })
+                }
             },
             TestAll() {
                 if (this.url) {

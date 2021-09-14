@@ -1,7 +1,7 @@
 import json
 from locust import TaskSet, task
 from locust.contrib.fasthttp import FastHttpUser
-
+import json
 url = None
 
 class UserTask(TaskSet):
@@ -11,7 +11,7 @@ class UserTask(TaskSet):
         global url
         import pymysql
         # 打开数据库连接
-        self.db = pymysql.connect("localhost", "root", "x", "api_test",port=13306)
+        self.db = pymysql.connect("localhost", "root", "x", "api_test",port=3306)
 
         # 使用 cursor() 方法创建一个游标对象 cursor
         cursor = self.db.cursor()
@@ -22,16 +22,18 @@ class UserTask(TaskSet):
 
         # 使用 fetchone() 方法获取单条数据.
         data_ = cursor.fetchone()
-        self.data = data_[2]
-        self.header=data_[3]
+        self.data = json.dumps(eval(data_[2]))
+        self.header=json.dumps(eval(data_[3]))
         url = data_[1]
 
 
     @task
     def old_transful(self):
-        data = json.dumps(self.data)
-        r = self.client.get("/rpc/v1", data=data,headers = self.header)
-        assert json.loads(r.text).get("data") is not None
+        data_ = json.dumps(self.data)
+        self.header = {"Content-Type": "application/json", "Accept-Encoding": "gzip,deflate"}
+        r = self.client.post("", data=data_,headers = self.header)
+        # assert json.loads(r.text) is not None
+        pass
 
     def on_stop(self):
         '''销毁数据，每个虚拟用户只执行一次'''

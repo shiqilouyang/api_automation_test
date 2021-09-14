@@ -37,3 +37,5 @@ uWSGI==2.0.18
 XlsxWriter==1.0.5
 zope.event==4.5.0
 zope.interface==5.4.0
+locust==1.4.4
+Flask==1.1.2

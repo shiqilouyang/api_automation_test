@@ -581,15 +581,19 @@ def post(header, address, request_parameter_type, data):
     p.address=address
     p.data=data
     p.header=header
-    p.save()
-    # from multiprocessing import Process
-    # def run():
-    #     path = os.path.abspath(os.path.dirname(__file__)) + "/presure_script.py"
-    #     print(path)
-    #     os.system('locust -f {} --web-host="{}"'.format(path,"127.0.0.1"))
-    #     print(os.getppid())
-    # process = Process(target=run)
-    # process.daemon = False
+    try:
+        import os
+        path = os.path.abspath(os.path.dirname(__file__)) + "/presure_script.py"
+        os.system("nohup locust -f {} --web-host  127.0.0.1 --web-port 8001  > name.log 2>&1 & echo $! > run.pid".format(path))
+        cid = None
+        with open("run.pid", 'r') as f:
+            cid = f.read()
+            p.aux_id = cid
+        p.save()
+    except Exception as e:
+        print(e)
+        p.save()
+
     try:
         return response.status_code, response.json(), response.headers
     except json.decoder.JSONDecodeError:

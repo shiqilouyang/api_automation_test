@@ -60,6 +60,7 @@ urlpatterns = [
     url(r'automation/del_api', Case.DelApi.as_view()),
     url(r'automation/start_test', Case.StartTest.as_view()),
     url(r'automation/pressure_start_test', Case.PressureStartTest.as_view()),
+    url(r'automation/stop_pre', Case.StopPre.as_view()),
     url(r'automation/add_time_task', Case.AddTimeTask.as_view()),
     url(r'automation/get_time_task', Case.GetTask.as_view()),
     url(r'automation/del_task', Case.DelTask.as_view()),
